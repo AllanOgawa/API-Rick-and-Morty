@@ -23,7 +23,7 @@ export class UsersService {
   async create(createUserDto: CreateUserDto) {
     createUserDto.password = await this.userHash(createUserDto.password)
 
-    this.userModel.create(createUserDto)
+    return await this.userModel.create(createUserDto)
   }
 
   private async userHash(pass) {
