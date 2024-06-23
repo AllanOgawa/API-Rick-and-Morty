@@ -8,7 +8,7 @@ The animated series *Rick and Morty*, created by Justin Roiland and Dan Harmon, 
 
 ## **What is the Rick and Morty API?**
 
-The Rick and Morty API is a RESTful interface that allows you to retrieve comprehensive data on characters, episodes, locations, and much more related to the *Rick and Morty* universe. Whether you're a developer interested in building an app based on the series or a fan curious about exploring the data, this API provides all the resources you need.
+The Rick and Morty API (https://rickandmortyapi.com) is a RESTful interface that allows you to retrieve comprehensive data on characters, episodes, locations, and much more related to the *Rick and Morty* universe. Whether you're a developer interested in building an app based on the series or a fan curious about exploring the data, this API provides all the resources you need.
 
 ## **About this project**
 
@@ -28,7 +28,7 @@ Next, check out an overview of the available endpoints and detailed instructions
 
 ## **Common structures**
 
-** Character: **
+### Character:
 | Atribute | Type | Description |
 | --- | --- | --- |
 | id | Number | The id of the character. |
@@ -41,7 +41,7 @@ Next, check out an overview of the available endpoints and detailed instructions
 | location | string | Character's last known location endpoint. |
 | image | string (url) | Link to the character's image. |
 
-** Episode: **
+### Episode: 
 | Atribute | Type | Description |
 | --- | --- | --- |
 | id | Number | The id of the episode. |
@@ -50,7 +50,7 @@ Next, check out an overview of the available endpoints and detailed instructions
 | episode | string | The season and episode (ex: "S04E02"). |
 | characters | Character[] | The ObjectId of the characters that appear in the episode. |
 
-** Location: **
+### Location:
 | Atribute | Type | Description |
 | --- | --- | --- |
 | id | Number | The id of the location. |
@@ -59,7 +59,7 @@ Next, check out an overview of the available endpoints and detailed instructions
 | dimension | string | The dimension of the location. |
 
 
-** Users: **
+### Users:
 | Atribute | Type | Description |
 | --- | --- | --- |
 | username | string | The username  |

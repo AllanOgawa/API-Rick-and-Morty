@@ -1,73 +1,68 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Rick and Morty API - Project with NestJS
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## **Description**
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Welcome to the Rick and Morty API documentation!
 
-## Description
+The animated series *Rick and Morty*, created by Justin Roiland and Dan Harmon, has captivated a fervent fanbase with its interdimensional adventures, eccentric characters, and unique humor. The Rick and Morty API is designed to provide developers with an easy and intuitive way to access detailed information about the expansive universe of the series.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## **What is the Rick and Morty API?**
 
-## Installation
+The Rick and Morty API (https://rickandmortyapi.com) is a RESTful interface that allows you to retrieve comprehensive data on characters, episodes, locations, and much more related to the *Rick and Morty* universe. Whether you're a developer interested in building an app based on the series or a fan curious about exploring the data, this API provides all the resources you need.
 
-```bash
-$ npm install
-```
+## **About this project**
 
-## Running the app
+In this project, we will develop a robust application using the NestJS framework, integrating data from the Rick and Morty API. This application will be structured to meet a set of specific requirements, ensuring complete CRUD functionalities, security through JWT authentication, data validation, exception handling, and performance monitoring.
 
-```bash
-# development
-$ npm run start
+## **Getting Started**
 
-# watch mode
-$ npm run start:dev
+To start using the Rick and Morty API, simply follow the steps outlined in this documentation. You will find details on how to make API calls, interpret responses, and practical examples to assist with integration. All endpoints are clearly described, along with accepted parameters and response formats.
 
-# production mode
-$ npm run start:prod
-```
+This documentation is designed to be your comprehensive guide in exploring the series universe, allowing you to effectively and efficiently integrate *Rick and Morty* data. Whether you are a fan of the series or a developer looking for new challenges, the Rick and Morty API is the perfect tool for you.
 
-## Test
+⚠️ **Note:**  This API is an unofficial tool and is maintained by fans of the series. All related data and materials are the property of Adult Swim and the creators of the series.
 
-```bash
-# unit tests
-$ npm run test
+Project repository: https://github.com/AllanOgawa/API-Rick-and-Morty.git
 
-# e2e tests
-$ npm run test:e2e
+Next, check out an overview of the available endpoints and detailed instructions on how to use them.
 
-# test coverage
-$ npm run test:cov
-```
+## **Common structures**
 
-## Support
+### Character:
+| Atribute | Type | Description |
+| --- | --- | --- |
+| id | Number | The id of the character. |
+| name | string | The name of the character. |
+| status | string | The status of the character ('Alive', 'Dead' or 'unknown'). |
+| species | string | The species of the character. |
+| type | string | The type or subspecies of the character. |
+| gender | string | The gender of the character ('Female', 'Male', 'Genderless' or 'unknown'). |
+| origin | string | Character's origin location. |
+| location | string | Character's last known location endpoint. |
+| image | string (url) | Link to the character's image. |
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Episode: 
+| Atribute | Type | Description |
+| --- | --- | --- |
+| id | Number | The id of the episode. |
+| name | string | The name of the episode. |
+| air_date | string | The date when the episode was released. |
+| episode | string | The season and episode (ex: "S04E02"). |
+| characters | Character[] | The ObjectId of the characters that appear in the episode. |
 
-## Stay in touch
+### Location:
+| Atribute | Type | Description |
+| --- | --- | --- |
+| id | Number | The id of the location. |
+| name | string | The name of the location. |
+| type | string | The type of the location (ex: "Planet"). |
+| dimension | string | The dimension of the location. |
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+### Users:
+| Atribute | Type | Description |
+| --- | --- | --- |
+| username | string | The username  |
+| age | Number | The user age |
+| email | string | The user email |
+| password | string | The user email password |
