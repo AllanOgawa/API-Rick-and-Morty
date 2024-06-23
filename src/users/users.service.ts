@@ -20,6 +20,11 @@ export class UsersService {
     return findedUser
   }
 
+  async findOneAuthentication(username: string) {
+    const findedUser = await this.userModel.findOne({ username: username })
+    return findedUser
+  }
+
   async create(createUserDto: CreateUserDto) {
     createUserDto.password = await this.userHash(createUserDto.password)
 

@@ -7,8 +7,8 @@ import { AuthGuard } from 'src/auth/auth.guard';
 export class UsersController {
     constructor(private readonly usersService: UsersService) { }
 
-    @UseGuards(AuthGuard)
     @Get()
+    @UseGuards(AuthGuard)
     async findAll() {
         try {
             return await this.usersService.findAll()
@@ -26,6 +26,7 @@ export class UsersController {
     }
 
     @Get(':username')
+    @UseGuards(AuthGuard)
     async findOne(@Param('username') username: string) {
         try {
             return await this.usersService.findOne(username)

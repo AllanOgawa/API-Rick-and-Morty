@@ -8,7 +8,7 @@ export class AuthService {
   constructor(private usersService: UsersService, private jwtService: JwtService) { }
 
   async signIn(username: string, pass: string): Promise<any> {
-    const user = await this.usersService.findOne(username)
+    const user = await this.usersService.findOneAuthentication(username)
 
     const isMath = await bcrypt.compare(pass, user.password)
 
